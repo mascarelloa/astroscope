@@ -1,0 +1,57 @@
+
+.body {
+    font-family:arial;  
+    background-color:black;
+}
+
+main {
+  margin:3%;
+}
+
+header {
+    height:400px;  
+    margin-bottom:50px;
+}
+.hero {
+    max-width:100%;
+    max-height: 400px;
+    background-size: contain;
+    background-position: center;
+  
+}
+
+header h1 {
+    position:relative;
+    bottom:275px;
+    display:flex;
+    justify-content:space-around;
+    color:white;
+    font-family:Poppins;
+    font-weight:200;
+    font-style:italic;
+    font-size:75px;
+    letter-spacing:3px;
+}
+
+.signs {
+    text-align:center;
+}
+
+
+h2 {
+    color:black;
+    font-family:Poppins;
+    font-weight:200;
+    /* font-style:italic; */
+    font-size:40px;
+    letter-spacing:3px;
+    text-align:center;
+}
+h3 {
+    color:black;
+    font-family:Poppins;
+    font-weight:400;
+    /* font-style:italic; */
+    font-size:20px;
+    letter-spacing:3px;
+}
