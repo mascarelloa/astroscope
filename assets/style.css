@@ -17,7 +17,10 @@ header {
     max-height: 400px;
     background-size: contain;
     background-position: center;
-  
+}
+
+.hero img {
+    width: 100%;
 }
 
 header h1 {
