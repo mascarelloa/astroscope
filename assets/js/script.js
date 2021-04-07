@@ -40,13 +40,26 @@ getNasa();
 
 
 
-  // aquariusCard.addEventListener("cilck", getHoroscope)
 
+  var aquariusBtn = document.querySelector(".aquarius-button");
+  var piscesBtn = document.querySelector(".pisces-button");
+  var ariesBtn = document.querySelector(".aries-button");
+  var taurusBtn = document.querySelector(".taurus-button");
+  var geminiBtn = document.querySelector(".gemini-button");
+  var cancerBtn = document.querySelector(".cancer-button");
+  var leoBtn = document.querySelector(".leo-button");
+  var virgoBtn = document.querySelector(".virgo-button");
+  var libraBtn = document.querySelector(".libra-button");
+  var scorpioBtn = document.querySelector(".scorpio-button");
+  var sagittariusBtn = document.querySelector(".sagittarius-button");
+  var capricornBtn = document.querySelector(".capricorn-button");
+ 
 
+aquariusBtn.addEventListener("click", getAquarius);
 
-  // function getHoroscope() {
+  function getAquarius() {
 
-    fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=" + sign + "&day=" + day, {
+    fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aquarius", {
   method: "POST",
   headers: {
     "x-rapidapi-key": "0e38836ee3msh75e0c7b966ff27fp1d6f8fjsn836a36a493f8",
@@ -60,8 +73,21 @@ getNasa();
   })
   .then((data) => {
     console.log(data);
-  });
+  
+
+  
+  var aquariusDesc = data.description;
+  var aquariusDescEl = document.createElement("p");
+  aquariusDescEl.textContent = aquariusDesc ;
+  aquariusCard.append(aquariusDescEl);
+
+  var aquariusNum = "Lucky Number: " + data.lucky_number;
+  var aquariusNumEl = document.createElement ("p");
+  aquariusNumEl.textContent = aquariusNum;
+  aquariusCard.append(aquariusNumEl);
 
 
+});
 
-// }
+}
+

@@ -68,6 +68,7 @@ h2 {
     text-align:center;
 }
 
+
 .sign-card h3 {
     color: #996164;
     font-family:Poppins;
@@ -75,11 +76,27 @@ h2 {
     /* font-style:italic; */
     font-size:25px;
     letter-spacing:3px;
+    text-align:center;
 }
-
-
 
 .sign-card img {
     height:175px;
     width:auto;
+}
+
+.sign-card button {
+    font-family:Poppins;
+    font-size:12px;
+    text-decoration:uppercase;
+    letter-spacing:2px;
+    color: #996164;
+    border: 2px solid #996164;
+    text-align:center;
+}
+
+.sign-card button:hover {
+    background-color:#996164;
+    color:white;
+    border: 2px solid #996164;
+    transition: 0.5 ease-in;
 }
