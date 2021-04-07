@@ -36,6 +36,22 @@ header h1 {
     letter-spacing:3px;
 }
 
+h4 {
+    font-family:Poppins;
+    font-weight: 200;
+    position: relative;
+    bottom: 250px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+span {
+    font-style: italic;
+    font-weight: 100;
+    position: relative;
+    justify-content: center;    
+}
+
 .signs {
     text-align:center;
 }
