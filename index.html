@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>astroscope</title>
     <link rel="resetsheet" href="./assets/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,900;1,100;1,200;1,400;1,600;1,800&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,900;1,100;1,200;1,400;1,600;1,800&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="./assets/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Header/Title Contnent -->
     <header>
-      <div class="uk-overflow-hidden hero">
-        <img
-          src="./assets/images/stars1.jpg"
-          alt="Example image"
-          class="uk-animation-reverse uk-transform-origin-top-right"
-          uk-scrollspy="cls: uk-animation-kenburns; repeat: true"
-        />
-      </div>
+        <div class="uk-overflow-hidden hero">
+            <img src="./assets/images/stars1.jpg" alt="Example image"
+                class="uk-animation-reverse uk-transform-origin-top-right"
+                uk-scrollspy="cls: uk-animation-kenburns; repeat: true" />
+        </div>
 
-      <h1>astroscope.</h1>
-      <h4>
-        "And we all shine on, like the moon and the stars and the sun." &nbsp;  <span> - John Lennon </span></h4>
-    
+        <h1>astroscope.</h1>
+        <h4>
+            "And we all shine on, like the moon and the stars and the sun." &nbsp; <span> - John Lennon </span></h4>
+
     </header>
 
     <!-- Start of main content including form with date picker. -->
@@ -43,13 +38,25 @@
 
 
         <h2>what's your sign?</h2>
-        <div class="uk-child-width-1-4@m signs" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+        <div class="uk-child-width-1-4@m signs" uk-grid
+            uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
             <div>
                 <div class="uk-card uk-card-default uk-card-body sign-card">
                     <img src="./assets/images/aquarius.png"><br>
                     <h3 class="uk-card-title">Aquarius</h3>
                     <p>January 20<small>th</small> - February 18<small>th</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Aquarius</h2>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
@@ -59,7 +66,19 @@
 
                     <h3 class="uk-card-title">Pisces</h3>
                     <p>February 19<small>th</small> - March 20<small>th</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Pisces</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -67,7 +86,19 @@
                     <img src="./assets/images/aries.png">
                     <h3 class="uk-card-title">Aries</h3>
                     <p>March 21<small>st</small> - April 19<small>th</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Aries</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -75,6 +106,18 @@
                     <img src="./assets/images/taurus.png">
                     <h3 class="uk-card-title">Taurus</h3>
                     <p>April 20<small>th</small> - May 20<small>th</small></p>
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Taurus</h2>
+                            <p></p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -83,7 +126,19 @@
                     <img src="./assets/images/gemini.png">
                     <h3 class="uk-card-title">Gemini</h3>
                     <p>May 21<small>st</small> - June 20<small>th</small></p>
-            
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Gemini</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -91,7 +146,19 @@
                     <img src="./assets/images/cancer.png">
                     <h3 class="uk-card-title">Cancer</h3>
                     <p>June 21<small>st</small> - July 22<small>nd</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Cancer</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -99,7 +166,19 @@
                     <img src="./assets/images/leo.png">
                     <h3 class="uk-card-title">Leo</h3>
                     <p>July 23<small>rd</small> - August 22<small>nd</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Leo</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -107,7 +186,19 @@
                     <img src="./assets/images/virgo.png">
                     <h3 class="uk-card-title">Virgo</h3>
                     <p>August 23<small>rd</small> - September 22<small>nd</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Virgo</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -116,7 +207,19 @@
                     <img src="./assets/images/libra.png">
                     <h3 class="uk-card-title">Libra</h3>
                     <p>September 23<small>rd</small> - October 22<small>nd</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Libra</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -125,7 +228,19 @@
                     <img src="./assets/images/scorpio.png">
                     <h3 class="uk-card-title">Scorpio</h3>
                     <p>October 23<small>rd</small> - November 21<small>st</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Scorpio</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -133,7 +248,19 @@
                     <img src="./assets/images/sagittarius.png">
                     <h3 class="uk-card-title">Sagittarius</h3>
                     <p>November 22<small>nd</small> - December 21<small>st</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Sagittarius</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div>
@@ -141,15 +268,27 @@
                     <img src="./assets/images/capricorn.png">
                     <h3 class="uk-card-title">Capricorn</h3>
                     <p>December 22<small>nd</small> - January 19<small>th</small></p>
-                    
+                    <!-- This is a button toggling the modal with the default close button -->
+                    <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                        uk-toggle="target: #modal-close-default">View Horoscope</button>
+
+                    <!-- This is the modal with the default close button -->
+                    <div id="modal-close-default" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">Capricorn</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </div>
-          </div>
-    
-      </div>
-      <div class="uk-section">
-          <h2>NASA's Picture of the day</h2>
-        <div class="uk-container nasaContainer"></div>
-      </div>
+            </div>
+
+        </div>
+        <div class="uk-section">
+            <h2>NASA's Picture of the day</h2>
+            <div class="uk-container nasaContainer"></div>
+        </div>
 
 
     </main>
@@ -160,5 +299,6 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
