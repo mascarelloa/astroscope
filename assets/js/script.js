@@ -1,6 +1,6 @@
 var nasaApi = "ON1XUNBwBpzxjo5RrwxFeAVrnOwZAeD0mpSD0RFP";
 
-var containerEl = document.querySelector(".container");
+var containerEl = document.querySelector(".nasaContainer");
 
 function getNasa() {
   var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + nasaApi;
