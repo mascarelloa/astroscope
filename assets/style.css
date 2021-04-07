@@ -1,4 +1,5 @@
 
+
 .body {
     font-family:arial;  
     background-color:black;
@@ -40,7 +41,7 @@ h4 {
     font-family:Poppins;
     font-weight: 200;
     position: relative;
-    bottom: 250px;
+    bottom: 300px;
     display: flex;
     justify-content: center;
     color: white;
@@ -58,7 +59,7 @@ span {
 
 
 h2 {
-    color:black;
+    color: black;
     font-family:Poppins;
     font-weight:200;
     /* font-style:italic; */
@@ -66,14 +67,16 @@ h2 {
     letter-spacing:3px;
     text-align:center;
 }
-h3 {
-    color:black;
+
+.sign-card h3 {
+    color: #996164;
     font-family:Poppins;
     font-weight:400;
     /* font-style:italic; */
-    font-size:20px;
+    font-size:25px;
     letter-spacing:3px;
 }
+
 
 
 .sign-card img {

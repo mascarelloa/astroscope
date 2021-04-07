@@ -22,7 +22,31 @@ function getNasa() {
 }
 getNasa();
 
-fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=cancer&day=today", {
+
+
+
+  var aquariusCard = document.querySelector ("#aquarius")
+  var piscesCard = document.querySelector ("#pisces")
+  var ariesCard = document.querySelector ("#aries")
+  var taurusCard = document.querySelector ("#taurus")
+  var geminiCard = document.querySelector ("#gemini")
+  var cancerCard = document.querySelector ("#cancer")
+  var leoCard = document.querySelector ("#leo")
+  var virgoCard = document.querySelector ("#virgo")
+  var libraCard = document.querySelector ("#libra")
+  var scorpioCard = document.querySelector ("#scorpio")
+  var sagittariusCard = document.querySelector ("#sagittarius")
+  var capricornCard = document.querySelector ("#capricorn")
+
+
+
+  // aquariusCard.addEventListener("cilck", getHoroscope)
+
+
+
+  // function getHoroscope() {
+
+    fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=" + sign + "&day=" + day, {
   method: "POST",
   headers: {
     "x-rapidapi-key": "0e38836ee3msh75e0c7b966ff27fp1d6f8fjsn836a36a493f8",
@@ -37,3 +61,7 @@ fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=cancer&day=today", {
   .then((data) => {
     console.log(data);
   });
+
+
+
+// }
