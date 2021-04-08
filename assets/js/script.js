@@ -1,6 +1,6 @@
 var nasaApi = "ON1XUNBwBpzxjo5RrwxFeAVrnOwZAeD0mpSD0RFP";
 
-var containerEl = document.querySelector(".nasaContainer");
+var containerEl = document.querySelector(".nasa-container");
 
 function getNasa() {
   var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + nasaApi;
@@ -16,7 +16,6 @@ function getNasa() {
       var backgroundImg = document.createElement("img");
 
       backgroundImg.setAttribute("src", imgUrl);
-
       containerEl.append(backgroundImg);
     });
 }
@@ -28,7 +27,11 @@ document.querySelectorAll(".sign-button").forEach(function (button) {
   });
 });
 
+
 function getHoroscope(signValue) {
+  
+
+
   fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=" + signValue, {
     method: "POST",
     headers: {
@@ -53,5 +56,7 @@ function getHoroscope(signValue) {
       var signNumEl = document.createElement("p");
       signNumEl.textContent = signNum;
       document.getElementById(`${signValue}`).append(signNumEl);
+
+
     });
 }
