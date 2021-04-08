@@ -45,10 +45,21 @@ function getHoroscope(signValue) {
       document.getElementById(`${signValue}`).innerHTML="";
       console.log(data);
 
+      var currentDate = data.current_date;
+      var currentDateEl = document.createElement("h3");
+      currentDateEl.textContent = currentDate;
+      document.getElementById(`${signValue}`).append(currentDateEl);
+
+
       var signDesc = data.description;
       var signDescEl = document.createElement("p");
       signDescEl.textContent = signDesc;
       document.getElementById(`${signValue}`).append(signDescEl);
+
+      var mood = "Mood: " + data.mood;
+      var moodEl = document.createElement("p");
+      moodEl.textContent = mood;
+      document.getElementById(`${signValue}`).append(moodEl);
 
       var signNum = "Lucky Number: " + data.lucky_number;
       var signNumEl = document.createElement("p");
@@ -56,9 +67,16 @@ function getHoroscope(signValue) {
       document.getElementById(`${signValue}`).append(signNumEl);
 
 
-      
-    });
+      var luckyColor = "Lucky Color: " + data.color;
+      var luckyColorEl = document.createElement("p");
+      luckyColorEl.textContent = luckyColor;
+      document.getElementById(`${signValue}`).append(luckyColorEl);
 
-  // signDescEl.innerHTML = "";
-  // signNumEl.innerHTML = "";
+
+      var luckyTime = "Lucky Time: " + data.lucky_time;
+      var luckyTimeEl = document.createElement("p");
+      luckyTimeEl.textContent = luckyTime;
+      document.getElementById(`${signValue}`).append(luckyTimeEl);
+
+    });
 }
