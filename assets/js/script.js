@@ -27,11 +27,7 @@ document.querySelectorAll(".sign-button").forEach(function (button) {
   });
 });
 
-
 function getHoroscope(signValue) {
-  
-
-
   fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=" + signValue, {
     method: "POST",
     headers: {
@@ -45,6 +41,8 @@ function getHoroscope(signValue) {
       return response.json();
     })
     .then((data) => {
+      //clear the div before adding elements
+      document.getElementById(`${signValue}`).innerHTML="";
       console.log(data);
 
       var signDesc = data.description;
@@ -56,7 +54,8 @@ function getHoroscope(signValue) {
       var signNumEl = document.createElement("p");
       signNumEl.textContent = signNum;
       document.getElementById(`${signValue}`).append(signNumEl);
-
-
     });
+
+  // signDescEl.innerHTML = "";
+  // signNumEl.innerHTML = "";
 }

@@ -64,6 +64,16 @@ span {
 
 }
 
+h6{
+    color: black;
+    font-family:Poppins;
+    font-weight:200;
+    /* font-style:italic; */
+    font-size:40px;
+    letter-spacing:3px;
+    text-align:left;
+}
+
 
 h2 {
     color: black;
