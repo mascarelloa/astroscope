@@ -80,3 +80,12 @@ function getHoroscope(signValue) {
 
     });
 }
+
+var year = moment().format("YYYY"); 
+
+var copyrightYear = document.getElementById("year");
+
+console.log(copyrightYear)
+
+copyrightYear.innerHTML = year
+//sets the year in the footer using moment to have the current year displayed next to copyright
