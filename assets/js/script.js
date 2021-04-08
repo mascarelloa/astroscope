@@ -66,6 +66,7 @@ function getHoroscope(signValue) {
       signNumEl.textContent = signNum;
       document.getElementById(`${signValue}`).append(signNumEl);
 
+
       var luckyColor = "Lucky Color: " + data.color;
       var luckyColorEl = document.createElement("p");
       luckyColorEl.textContent = luckyColor;
@@ -77,9 +78,5 @@ function getHoroscope(signValue) {
       luckyTimeEl.textContent = luckyTime;
       document.getElementById(`${signValue}`).append(luckyTimeEl);
 
-
     });
-
-  // signDescEl.innerHTML = "";
-  // signNumEl.innerHTML = "";
 }
