@@ -64,7 +64,7 @@ span {
 
 }
 
-h6{
+h6 {
     color: black;
     font-family:Poppins;
     font-weight:200;
@@ -185,4 +185,10 @@ h2 {
     filter:opacity(50%);
     -webkit-transform: scale(1.3);
 	transform: scale(1.3);
+}
+
+.sign-content p {
+    font-family:roboto;
+    font-weight:300;
+    font-size: 25px;
 }

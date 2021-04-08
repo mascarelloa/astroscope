@@ -54,6 +54,9 @@ function getHoroscope(signValue) {
       var signNumEl = document.createElement("p");
       signNumEl.textContent = signNum;
       document.getElementById(`${signValue}`).append(signNumEl);
+
+
+      
     });
 
   // signDescEl.innerHTML = "";
