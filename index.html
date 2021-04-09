@@ -1,347 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>astroscope</title>
     <link rel="resetsheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,900;1,100;1,200;1,400;1,600;1,800&display=swap"
-        rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;1,100;1,400&family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap" rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,900;1,100;1,200;1,400;1,600;1,800&display=swap"
+      rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;1,100;1,400&family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap"
+      rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header/Title Contnent -->
     <header>
-        <div class="uk-overflow-hidden hero">
-            <img src="./assets/images/stars1.jpg" alt="Example image"
-                class="uk-animation-reverse uk-transform-origin-top-right"
-                uk-scrollspy="cls: uk-animation-kenburns; repeat: true" />
-        </div>
+      <div class="uk-overflow-hidden hero">
+        <img
+          src="./assets/images/stars1.jpg"
+          alt="Example image"
+          class="uk-animation-reverse uk-transform-origin-top-right"
+          uk-scrollspy="cls: uk-animation-kenburns; repeat: true"
+        />
+      </div>
 
-        <h1>astroscope.</h1>
-        <h4>
-            Don't just look up at the stars —  be one.</h4>
-
+      <h1>astroscope.</h1>
+      <h2>Don't just look up at the stars — be one.</h2>
     </header>
 
-    <!-- Start of main content including form with date picker. -->
+    <!-- Start of main content -->
     <main>
 
+      <h3>What's your star sign...</h3>
 
-        <!-- These can be the cards for the sights. When user clicks their sign, it takes them to a page with their horoscope data. -->
+      <div
+        class="uk-child-width-1-4@m signs"
+        uk-grid
+        uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: true">
+        <!-- This starts the aquarius card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/aquarius.png" /><br />
+            <h3 class="uk-card-title">Aquarius</h3>
+            <p>January 20<small>th</small> - February 18<small>th</small></p>
 
+            <!-- This is a button toggling the modal with the horoscope information -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right aquarius-button sign-button"
+              data-sign="aquarius"
+              type="button"
+              uk-toggle="target: #aquarius-modal">
+              View Horoscope
+            </button>
 
-        <h6>Pick your star sign...</h6>
+            <!-- This is the modal with the horoscope information -->
+            <div id="aquarius-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/aquariussymbol.png" width="200px" />
+                </center>
+                <h2>The Water Bearer</h2>
 
-        <div class="uk-child-width-1-4@m signs" uk-grid
-            uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 100; repeat: true">
-
-            <!-- This starts the aquarius card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/aquarius.png"><br>
-                    <h3 class="uk-card-title">Aquarius</h3>
-                    <p>January 20<small>th</small> - February 18<small>th</small></p>
-
-                    <!-- This is a button toggling the modal with the horoscope information -->
-                    <button class="uk-button uk-button-default uk-margin-small-right aquarius-button sign-button" data-sign="aquarius" type="button"
-                        uk-toggle="target: #aquarius-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the horoscope information -->
-                    <div id="aquarius-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-
-                            <h2 class="uk-modal-title">Aquarius</h2>
-
-                            <div class="sign-content" id="aquarius"></div>
-
-                        </div>
-                    </div>
-                </div>
+                <div class="sign-content" id="aquarius"></div>
+              </div>
             </div>
-
-
-            <!-- This starts the pisces card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/pisces.png">
-
-
-                    <h3 class="uk-card-title">Pisces</h3>
-                    <p>February 19<small>th</small> - March 20<small>th</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right pisces-button sign-button" data-sign="pisces"type="button"
-                        uk-toggle="target: #pisces-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="pisces-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title">Pisces</h2>
-                            <div class="sign-content" id="pisces"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the aries card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/aries.png">
-                    <h3 class="uk-card-title">Aries</h3>
-                    <p>March 21<small>st</small> - April 19<small>th</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right aries-button sign-button" data-sign="aries" type="button"
-                        uk-toggle="target: #aries-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="aries-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title aries">Aries</h2>
-                            <div class="sign-content" id="aries"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the taurus card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/taurus.png">
-                    <h3 class="uk-card-title">Taurus</h3>
-                    <p>April 20<small>th</small> - May 20<small>th</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right taurus-button sign-button" data-sign="taurus" type="button"
-                        uk-toggle="target: #taurus-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="taurus-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title taurus">Taurus</h2>
-                            <div class="sign-content" id="taurus"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the gemini card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/gemini.png">
-                    <h3 class="uk-card-title">Gemini</h3>
-                    <p>May 21<small>st</small> - June 20<small>th</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="gemini" type="button"
-                        uk-toggle="target: #gemini-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="gemini-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title gemini">Gemini</h2>
-                            <div class="sign-content" id="gemini"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the cancer card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/cancer.png">
-                    <h3 class="uk-card-title">Cancer</h3>
-                    <p>June 21<small>st</small> - July 22<small>nd</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="cancer" type="button"
-                        uk-toggle="target: #cancer-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="cancer-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title cancer">Cancer</h2>
-                            <div class="sign-content" id="cancer"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the leo card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/leo.png">
-                    <h3 class="uk-card-title">Leo</h3>
-                    <p>July 23<small>rd</small> - August 22<small>nd</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="leo" type="button"
-                        uk-toggle="target: #leo-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="leo-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title leo">Leo</h2>
-                            <div class="sign-content" id="leo"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the virgo card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/virgo.png">
-                    <h3 class="uk-card-title">Virgo</h3>
-                    <p>August 23<small>rd</small> - September 22<small>nd</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="virgo" type="button"
-                        uk-toggle="target: #virgo-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="virgo-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title virgo">Virgo</h2>
-                            <div class="sign-content" id="virgo"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the libra card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/libra.png">
-                    <h3 class="uk-card-title">Libra</h3>
-                    <p>September 23<small>rd</small> - October 22<small>nd</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="libra" type="button"
-                        uk-toggle="target: #libra-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="libra-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title libra">Libra</h2>
-                            <div class="sign-content" id="libra"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the scorpio card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/scorpio.png">
-                    <h3 class="uk-card-title">Scorpio</h3>
-                    <p>October 23<small>rd</small> - November 21<small>st</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="scorpio" type="button"
-                        uk-toggle="target: #scorpio-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="scorpio-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title scorpio">Scorpio</h2>
-                            <div class="sign-content" id="scorpio"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the sagittarius card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/sagittarius.png">
-                    <h3 class="uk-card-title">Sagittarius</h3>
-                    <p>November 22<small>nd</small> - December 21<small>st</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="sagittarius" type="button"
-                        uk-toggle="target: #sagittarius-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="sagittarius-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title sagittarius">Sagittarius</h2>
-                            <div class="sign-content" id="sagittarius"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- This starts the capricorn card. -->
-            <div>
-                <div class="uk-card uk-card-default uk-card-body sign-card">
-                    <img src="./assets/images/capricorn.png">
-                    <h3 class="uk-card-title">Capricorn</h3>
-                    <p>December 22<small>nd</small> - January 19<small>th</small></p>
-                    <!-- This is a button toggling the modal with the default close button -->
-                    <button class="uk-button uk-button-default uk-margin-small-right sign-button" data-sign="capricorn" type="button"
-                        uk-toggle="target: #capricorn-modal">View Horoscope</button>
-
-                    <!-- This is the modal with the default close button -->
-                    <div id="capricorn-modal" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 class="uk-modal-title">Capricorn</h2>
-                            <div class="sign-content" id="capricorn"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+          </div>
         </div>
 
+        <!-- This starts the pisces card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/pisces.png" />
+
+            <h3 class="uk-card-title">Pisces</h3>
+            <p>February 19<small>th</small> - March 20<small>th</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right pisces-button sign-button"
+              data-sign="pisces"
+              type="button"
+              uk-toggle="target: #pisces-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="pisces-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/piscessymbol.png" width="200px" />
+                </center>
+                <h2>The Fish</h2>
+                <div class="sign-content" id="pisces"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the aries card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/aries.png" />
+            <h3 class="uk-card-title">Aries</h3>
+            <p>March 21<small>st</small> - April 19<small>th</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right aries-button sign-button"
+              data-sign="aries"
+              type="button"
+              uk-toggle="target: #aries-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="aries-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="./assets/images/aiessymbol.png" width="200px" />
+                </center>
+                <h2>The Ram</h2>
+                <div class="sign-content" id="aries"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the taurus card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/taurus.png" />
+            <h3 class="uk-card-title">Taurus</h3>
+            <p>April 20<small>th</small> - May 20<small>th</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right taurus-button sign-button"
+              data-sign="taurus"
+              type="button"
+              uk-toggle="target: #taurus-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="taurus-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/taurussymbol.png" width="200px" />
+                </center>
+                <h2>The Bull</h2>
+                <div class="sign-content" id="taurus"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the gemini card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/gemini.png" />
+            <h3 class="uk-card-title">Gemini</h3>
+            <p>May 21<small>st</small> - June 20<small>th</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="gemini"
+              type="button"
+              uk-toggle="target: #gemini-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="gemini-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/geminisymbol.png" width="200px" />
+                </center>
+                <h2>The Twins</h2>
+                <div class="sign-content" id="gemini"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the cancer card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/cancer.png" />
+            <h3 class="uk-card-title">Cancer</h3>
+            <p>June 21<small>st</small> - July 22<small>nd</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="cancer"
+              type="button"
+              uk-toggle="target: #cancer-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="cancer-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/cancersymbol.png" width="200px" />
+                </center>
+                <h2>The Crab</h2>
+                <div class="sign-content" id="cancer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the leo card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/leo.png" />
+            <h3 class="uk-card-title">Leo</h3>
+            <p>July 23<small>rd</small> - August 22<small>nd</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="leo"
+              type="button"
+              uk-toggle="target: #leo-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="leo-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/leosymbol.png" width="200px" />
+                </center>
+                <h2>The Lion</h2>
+                <div class="sign-content" id="leo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the virgo card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/virgo.png" />
+            <h3 class="uk-card-title">Virgo</h3>
+            <p>August 23<small>rd</small> - September 22<small>nd</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="virgo"
+              type="button"
+              uk-toggle="target: #virgo-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="virgo-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/virgosymbol.png" width="200px" />
+                </center>
+                <h2>The Virgin</h2>
+                <div class="sign-content" id="virgo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the libra card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/libra.png" />
+            <h3 class="uk-card-title">Libra</h3>
+            <p>September 23<small>rd</small> - October 22<small>nd</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="libra"
+              type="button"
+              uk-toggle="target: #libra-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="libra-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/librasymbol.png" width="200px" />
+                </center>
+                <h2>The Scales</h2>
+                <div class="sign-content" id="libra"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the scorpio card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/scorpio.png" />
+            <h3 class="uk-card-title">Scorpio</h3>
+            <p>October 23<small>rd</small> - November 21<small>st</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="scorpio"
+              type="button"
+              uk-toggle="target: #scorpio-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="scorpio-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img src="assets/images/scorpiosymbol.png" width="200px" />
+                </center>
+                <h2>The Scorpion</h2>
+                <div class="sign-content" id="scorpio"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the sagittarius card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/sagittarius.png" />
+            <h3 class="uk-card-title">Sagittarius</h3>
+            <p>November 22<small>nd</small> - December 21<small>st</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="sagittarius"
+              type="button"
+              uk-toggle="target: #sagittarius-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal with content -->
+            <div id="sagittarius-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close></button>
+                <center>
+                  <img
+                    src="assets/images/sagittariussymbol.png"
+                    width="200px"
+                  />
+                </center>
+                <h2>The Archer</h2>
+                <div class="sign-content" id="sagittarius"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This starts the capricorn card. -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-body sign-card">
+            <img src="./assets/images/capricorn.png" />
+            <h3 class="uk-card-title">Capricorn</h3>
+            <p>December 22<small>nd</small> - January 19<small>th</small></p>
+            <!-- This is the button that opens the modal -->
+            <button
+              class="uk-button uk-button-default uk-margin-small-right sign-button"
+              data-sign="capricorn"
+              type="button"
+              uk-toggle="target: #capricorn-modal">
+              View Horoscope
+            </button>
+
+            <!-- This is the opened modal and content -->
+            <div id="capricorn-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <button
+                  class="uk-modal-close-default"
+                  type="button"
+                  uk-close
+                ></button>
+                <center>
+                  <img
+                    src="./assets/images/caoricornsymbol.png"
+                    width="200px"
+                  />
+                </center>
+                <h2>The Goat</h2>
+                <div class="sign-content" id="capricorn"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
+    <!-- This starts the NASA content. -->
     <article>
-        <div class="uk-section nasa">
-            <h2>LOOK UP...
-            <br>
-            <span>with NASA's Astronomy Photo<br>
-                of the Day.</span></h2>
-            <div class="nasa-photo">
-            <div class="uk-cover-container nasa-container"></div>
+      <div class="uk-section nasa">
+        <h5>
+          LOOK UP& <br />
+          DISCOVER<span>with NASA...</span>
+        </h5>
+
+        <div class="nasa-links">
+          <a class="uk-button uk-button-default pod" href="#nasa-pod" uk-toggle
+            >Photo of the Day</a>
+
+          <div id="nasa-pod" class="uk-flex-top" uk-modal>
+            <div
+              class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical large-nasa">
+              <button
+                class="uk-modal-close-outside"
+                type="button"
+                uk-close></button>
             </div>
+          </div>
+
+          <a class="uk-button uk-button-default pod"
+            href="https://images.nasa.gov/" target="_blank">Image & Video Gallery</a>
+
+        </div>
         </div>
     </article>
-   
 
-    <!-- Footer Content -->
+    <!-- This starts the footer Content -->
     <footer class="uk-block">
-        &copy; Copyright <span id="year"></span> Space Jam Inc.🔮
-
+      <p>
+        &copy; Copyright <span id="year"></span> All Rights Reserved. We ♡
+        NASA.<br />
+        Made by Space Jam.🔮
+      </p>
     </footer>
 
-    <script src="https://unpkg.com/moment"> </script>
+    <script
+      src="https://kit.fontawesome.com/beaac50b38.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/moment"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
     <script src="./assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
