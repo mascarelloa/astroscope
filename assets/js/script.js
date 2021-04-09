@@ -1,6 +1,7 @@
 var nasaApi = "ON1XUNBwBpzxjo5RrwxFeAVrnOwZAeD0mpSD0RFP";
 
 var containerEl = document.querySelector(".nasa-container");
+var photoEl = document.querySelector(".large-nasa")
 
 function getNasa() {
   var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + nasaApi;
@@ -15,8 +16,9 @@ function getNasa() {
       console.log(imgUrl);
       var backgroundImg = document.createElement("img");
 
+
       backgroundImg.setAttribute("src", imgUrl);
-      containerEl.append(backgroundImg);
+      photoEl.append(backgroundImg);
     });
 }
 getNasa();
@@ -45,8 +47,8 @@ function getHoroscope(signValue) {
       document.getElementById(`${signValue}`).innerHTML="";
       console.log(data);
 
-      var currentDate = data.current_date;
-      var currentDateEl = document.createElement("h3");
+      var currentDate = "Today, " + data.current_date;
+      var currentDateEl = document.createElement("h4");
       currentDateEl.textContent = currentDate;
       document.getElementById(`${signValue}`).append(currentDateEl);
 
@@ -57,24 +59,24 @@ function getHoroscope(signValue) {
       document.getElementById(`${signValue}`).append(signDescEl);
 
       var mood = "Mood: " + data.mood;
-      var moodEl = document.createElement("p");
+      var moodEl = document.createElement("li");
       moodEl.textContent = mood;
       document.getElementById(`${signValue}`).append(moodEl);
 
       var signNum = "Lucky Number: " + data.lucky_number;
-      var signNumEl = document.createElement("p");
+      var signNumEl = document.createElement("li");
       signNumEl.textContent = signNum;
       document.getElementById(`${signValue}`).append(signNumEl);
 
 
       var luckyColor = "Lucky Color: " + data.color;
-      var luckyColorEl = document.createElement("p");
+      var luckyColorEl = document.createElement("li");
       luckyColorEl.textContent = luckyColor;
       document.getElementById(`${signValue}`).append(luckyColorEl);
 
 
       var luckyTime = "Lucky Time: " + data.lucky_time;
-      var luckyTimeEl = document.createElement("p");
+      var luckyTimeEl = document.createElement("li");
       luckyTimeEl.textContent = luckyTime;
       document.getElementById(`${signValue}`).append(luckyTimeEl);
 
