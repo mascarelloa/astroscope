@@ -1,6 +1,10 @@
-# Astroscope
+# Description
 
-Astroscope is an interactive web application that displays the user's daily horoscope along with lucky number, time and color. The user also gets a link to Nasa's photo of the day as well as Nasa's image and photo gallery. 
+Astroscope is an interactive web application that displays the user's daily horoscope along with lucky number, time and color. 
+
+See the application here: https://mascarelloa.github.io/astroscope/
+
+The user also gets a link to Nasa's photo of the day as well as Nasa's image and photo gallery. 
 
 ## Usage
 
@@ -28,8 +32,6 @@ Additionally, media queries were added to give users with smaller screens more r
 
 ![screenshot5](https://user-images.githubusercontent.com/78389456/114197192-17122380-9920-11eb-8af5-3186bcfb06de.jpg)
 
-![Screenshot7](https://user-images.githubusercontent.com/78389456/114200285-0ca55900-9923-11eb-8648-f7d69b1a4369.jpg)
 
 
-## Link to deployed application
-Link: https://mascarelloa.github.io/astroscope/
+
