@@ -6,6 +6,16 @@ See the application here: https://mascarelloa.github.io/astroscope/
 
 The user also gets a link to Nasa's photo of the day as well as Nasa's image and photo gallery. 
 
+## Built With
+
+* Javascript
+* HTML
+* CSS
+* UIKit
+* Open Web Api's: 
+  - https://api.nasa.gov/
+  - https://aztro.readthedocs.io/en/latest/
+* Procreate for image
 ## Usage
 
 Upon loading, users are transported into space with an animation of stars in space on the jumbotron. Users can then select the horoscope of their choice..
